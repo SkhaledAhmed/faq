@@ -1,0 +1,290 @@
+*
+{
+	box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body
+{
+	margin: 0;
+	padding: 0;
+	background:linear-gradient(to bottom,hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: 'Kumbh Sans', sans-serif;
+
+}
+.attribution
+{
+	text-align: center;
+	font-size: 22px;
+	padding-bottom: 20px;
+}
+.attribution a
+{
+	color: white;
+
+}
+.card
+{
+	width:80%;
+	min-height: 500px;
+	margin: 100px auto;
+	background: white;
+	border-radius: 15px;
+}
+
+.card > div
+{
+	border:1px solid transparent;
+	height: 100%;
+	float:left;
+}
+.brand-desktop,.box-desktop
+{
+	display: none;
+}
+.faq h1
+{
+	text-align: center;
+	color:hsl(238, 29%, 16%)
+}
+ul 
+{
+	padding:10px;
+	list-style: none;
+}
+ul li
+{
+	border-bottom:1px solid hsl(240, 6%, 85%);
+	padding-right:20px; 
+	overflow: hidden;
+	height: 49px;
+	position: relative;
+	cursor: pointer;
+	
+}
+.active
+{
+	height:auto;
+}
+
+.active .question
+{
+	color:hsl(238, 29%, 16%);
+	font-weight: bold;
+}
+.active .up
+{
+	display: block;
+}
+.active .down
+{
+	display: none;
+}
+.question
+{
+	transition:color 300ms ease;
+	color:hsl(237, 12%, 33%);
+}
+.answer
+{
+	color:hsl(240, 6%, 50%)
+}
+ul li:hover .question
+{
+	color:hsl(14, 88%, 65%);
+}
+ul li > img 
+{
+	width: 15px;
+	height: 10px;
+	position: absolute;
+	 top: 15px;
+    right: 8px;
+}
+
+ul li > .up
+{
+	display: none;
+	transform-origin: center;
+    transform: rotateX(180deg);
+}
+
+
+
+
+@media(max-width: 867px)
+{
+
+	.card > div 
+	{
+		width: 100%;
+	}
+	.card .faq
+	{
+
+		background-color: white;
+
+		padding-bottom: 33px;
+	}
+	.card .brand-mobile
+	{
+		    position: relative;
+		    top: -72px;
+		    right: 10px;
+		    height: 200px;
+	}
+	.card .brand-mobile > img
+	{
+		position: absolute;
+		right:50%;
+		left:50%;
+		transform: translateX(-50%);
+	}
+	.card .brand-mobile > .woman-online-mobile
+	{
+		top: 0;
+	}
+	.card .brand-mobile > .bg-pattern-mobile
+	{
+		top: 107px;
+	}
+}
+
+
+/* Desktop screen*/
+@media (min-width:1228px)
+{
+	.faq h1
+	{
+		text-align: left;
+	}
+	.card
+	{
+		overflow: hidden;
+	}
+	.brand-mobile,.box-mobile
+	{
+		display: none;
+	}
+	.brand-desktop,.box-desktop
+	{
+		display: block;
+	}
+	.card .brand-desktop
+	{
+		width:50%;
+		position: relative;
+	}
+	.card .brand-desktop > img
+	{
+		position: absolute;
+	}
+	.card .brand-desktop > .bg-pattern-desktop
+	{
+		top: -274px;
+    	left: -547px;
+	}
+	.card .brand-desktop > .woman-online-desktop
+	{
+		top: 55px;
+    	left:-11.5%;
+	}
+	.card  .box-desktop
+	{
+		z-index: 2;
+	    position: absolute;
+	    top: 300px;
+	    left: 3.5%;
+	}
+
+	.card .faq
+	{
+
+		background-color: white;
+		padding:57px;
+		padding-left:0;
+		width: 50%
+	}
+	ul
+	{
+		padding:0;
+		width:112%;
+		margin-right:20px;
+	}
+
+
+}
+/* tablet screen*/
+@media (max-width:1228px) and (min-width:868px)
+{
+	.faq h1
+	{
+		text-align: left;
+		margin-left: 25px;
+	}
+	.card
+	{
+		overflow: hidden;
+	}
+	.brand-mobile,.box-mobile
+	{
+		display: none;
+	} 
+
+	.brand-desktop,.box-desktop
+	{
+		display: block;
+	}
+	.card
+	{
+		width:90%;
+	}
+	.card .brand-desktop
+	{
+		width:40%;
+		min-width: 416px;
+		position: relative;
+	}
+
+	.card .brand-desktop > img,.card .box-desktop
+	{
+		position: absolute;
+		transform: scale(0.8);
+	}
+	.card .brand-desktop > .bg-pattern-desktop
+	{
+		top: -274px;
+    	left: -547px;
+	}
+	.card .brand-desktop > .woman-online-desktop
+	{
+		top: 55px;
+    	left:-19.5%;
+    	transform: translateX(3%);
+	}
+	.card  .box-desktop
+	{
+		z-index: 2;
+	    top: 300px;
+	    left: -3.5%;
+	    transform: translateX(3%);
+	}
+	.card .faq
+	{
+		background-color: white;
+		padding:57px;
+		padding-left:0;
+		width: 45%;
+	}
+	ul
+	{
+		padding:23px;
+		width:130%;
+	}
+}
+
+
+
